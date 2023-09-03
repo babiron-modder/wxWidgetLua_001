@@ -1,0 +1,18 @@
+﻿  main.cpp
+main.obj : error LNK2019: 未解決の外部シンボル "__declspec(dllimport) public: __thiscall wxString::~wxString(void)" (__imp_??1wxString@@QAE@XZ) が関数 "public: void * __thiscall wxString::`vector deleting destructor'(unsigned int)" (??_EwxString@@QAEPAXI@Z) で参照されました
+D:\Programing\Projects_vs2019\wxWidgetLua_001\wxWidgetLua_001\lib\wxWidget_lib_x64\lib\vc14x_dll\wxbase32ud.lib : warning LNK4272: ライブラリのコンピューターの種類 'x64' がターゲットのコンピューターの種類' x86' と競合しています
+D:\Programing\Projects_vs2019\wxWidgetLua_001\wxWidgetLua_001\lib\wxWidget_lib_x64\lib\vc14x_dll\wxbase32ud_net.lib : warning LNK4272: ライブラリのコンピューターの種類 'x64' がターゲットのコンピューターの種類' x86' と競合しています
+D:\Programing\Projects_vs2019\wxWidgetLua_001\wxWidgetLua_001\lib\wxWidget_lib_x64\lib\vc14x_dll\wxbase32ud_xml.lib : warning LNK4272: ライブラリのコンピューターの種類 'x64' がターゲットのコンピューターの種類' x86' と競合しています
+D:\Programing\Projects_vs2019\wxWidgetLua_001\wxWidgetLua_001\lib\wxWidget_lib_x64\lib\vc14x_dll\wxmsw32ud_core.lib : warning LNK4272: ライブラリのコンピューターの種類 'x64' がターゲットのコンピューターの種類' x86' と競合しています
+D:\Programing\Projects_vs2019\wxWidgetLua_001\wxWidgetLua_001\lib\wxWidget_lib_x64\lib\vc14x_dll\wxmsw32ud_html.lib : warning LNK4272: ライブラリのコンピューターの種類 'x64' がターゲットのコンピューターの種類' x86' と競合しています
+D:\Programing\Projects_vs2019\wxWidgetLua_001\wxWidgetLua_001\lib\wxWidget_lib_x64\lib\vc14x_dll\wxmsw32ud_qa.lib : warning LNK4272: ライブラリのコンピューターの種類 'x64' がターゲットのコンピューターの種類' x86' と競合しています
+D:\Programing\Projects_vs2019\wxWidgetLua_001\wxWidgetLua_001\lib\wxWidget_lib_x64\lib\vc14x_dll\wxmsw32ud_xrc.lib : warning LNK4272: ライブラリのコンピューターの種類 'x64' がターゲットのコンピューターの種類' x86' と競合しています
+D:\Programing\Projects_vs2019\wxWidgetLua_001\wxWidgetLua_001\lib\wxWidget_lib_x64\lib\vc14x_dll\wxmsw32ud_aui.lib : warning LNK4272: ライブラリのコンピューターの種類 'x64' がターゲットのコンピューターの種類' x86' と競合しています
+D:\Programing\Projects_vs2019\wxWidgetLua_001\wxWidgetLua_001\lib\wxWidget_lib_x64\lib\vc14x_dll\wxmsw32ud_propgrid.lib : warning LNK4272: ライブラリのコンピューターの種類 'x64' がターゲットのコンピューターの種類' x86' と競合しています
+D:\Programing\Projects_vs2019\wxWidgetLua_001\wxWidgetLua_001\lib\wxWidget_lib_x64\lib\vc14x_dll\wxmsw32ud_ribbon.lib : warning LNK4272: ライブラリのコンピューターの種類 'x64' がターゲットのコンピューターの種類' x86' と競合しています
+D:\Programing\Projects_vs2019\wxWidgetLua_001\wxWidgetLua_001\lib\wxWidget_lib_x64\lib\vc14x_dll\wxmsw32ud_richtext.lib : warning LNK4272: ライブラリのコンピューターの種類 'x64' がターゲットのコンピューターの種類' x86' と競合しています
+D:\Programing\Projects_vs2019\wxWidgetLua_001\wxWidgetLua_001\lib\wxWidget_lib_x64\lib\vc14x_dll\wxmsw32ud_media.lib : warning LNK4272: ライブラリのコンピューターの種類 'x64' がターゲットのコンピューターの種類' x86' と競合しています
+D:\Programing\Projects_vs2019\wxWidgetLua_001\wxWidgetLua_001\lib\wxWidget_lib_x64\lib\vc14x_dll\wxmsw32ud_stc.lib : warning LNK4272: ライブラリのコンピューターの種類 'x64' がターゲットのコンピューターの種類' x86' と競合しています
+D:\Programing\Projects_vs2019\wxWidgetLua_001\wxWidgetLua_001\lib\wxWidget_lib_x64\lib\vc14x_dll\wxmsw32ud_webview.lib : warning LNK4272: ライブラリのコンピューターの種類 'x64' がターゲットのコンピューターの種類' x86' と競合しています
+D:\Programing\Projects_vs2019\wxWidgetLua_001\wxWidgetLua_001\lib\wxWidget_lib_x64\lib\vc14x_dll\wxmsw32ud_gl.lib : warning LNK4272: ライブラリのコンピューターの種類 'x64' がターゲットのコンピューターの種類' x86' と競合しています
+D:\Programing\Projects_vs2019\wxWidgetLua_001\Debug\wxWidgetLua_001.exe : fatal error LNK1120: 1 件の未解決の外部参照
