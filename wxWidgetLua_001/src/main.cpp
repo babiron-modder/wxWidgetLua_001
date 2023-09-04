@@ -91,47 +91,66 @@ namespace wxcpp {
 
 
 
-int main() {
+int main(int argc, char* argv[]) {
 	Lua::state = luaL_newstate();
 	luaL_openlibs(Lua::state);
 
+
 	// luaL_dostring(Lua::state, "print('hello lua script!!')");
 
-	luaL_loadfile(Lua::state, "test001.lua");
-	lua_pcall(Lua::state, 0, 0, 0);
+	std::string filename = "";
 
-	// 関数登録
-	lua_pushcfunction(Lua::state, wxcpp::Frame);
-	lua_setglobal(Lua::state, "Frame");
-	lua_pushcfunction(Lua::state, wxcpp::StaticText);
-	lua_setglobal(Lua::state, "StaticText");
-	lua_pushcfunction(Lua::state, wxcpp::Button);
-	lua_setglobal(Lua::state, "Button");
-	lua_pushcfunction(Lua::state, wxcpp::addClickEvent);
-	lua_setglobal(Lua::state, "addClickEvent");
+	// 引数がない場合はファイル選択をさせる
+	if (argc != 2) {
+		wxFileDialog* file = new wxFileDialog(nullptr);
+		if (file->ShowModal() == wxID_OK) {
+			filename = file->GetPath();
+		}
+	}
+	else
+	{
+		filename = std::string(argv[1]);
+	}
 
+	if (luaL_loadfile(Lua::state, filename.c_str()) == 0) {
+		// ファイル読み込みが成功した場合のみ続ける
+		lua_pcall(Lua::state, 0, 0, 0);
 
-	// ウィンドウ準備
-	wxApp::SetInstance(new MyApp());
-	wxEntryStart(0, NULL);
-
-
-	// 実行
-	lua_getglobal(Lua::state, "main");
-	lua_pcall(Lua::state, 0, 0, 0);
-
-
-
-
-
-
-
+		// 関数登録
+		lua_pushcfunction(Lua::state, wxcpp::Frame);
+		lua_setglobal(Lua::state, "Frame");
+		lua_pushcfunction(Lua::state, wxcpp::StaticText);
+		lua_setglobal(Lua::state, "StaticText");
+		lua_pushcfunction(Lua::state, wxcpp::Button);
+		lua_setglobal(Lua::state, "Button");
+		lua_pushcfunction(Lua::state, wxcpp::addClickEvent);
+		lua_setglobal(Lua::state, "addClickEvent");
 
 
-	wxTheApp->CallOnInit();
-	wxTheApp->OnRun();
-	wxTheApp->OnExit();
-	wxEntryCleanup();
+		// ウィンドウ準備
+		wxApp::SetInstance(new MyApp());
+		wxEntryStart(0, NULL);
+
+
+
+
+		// Luaのmain呼び出し
+		lua_getglobal(Lua::state, "main");
+		lua_pcall(Lua::state, 0, 0, 0);
+
+
+
+
+
+
+
+
+
+		wxTheApp->CallOnInit();
+		wxTheApp->OnRun();
+		wxTheApp->OnExit();
+		wxEntryCleanup();
+	}
 
 
 
